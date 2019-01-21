@@ -13,7 +13,7 @@
 > *Your answer here*
 
 ### What is a critical section?
-> *Your answer here*
+> Innenfor informatikken er en kritisk region eller en kritisk seksjon en beskyttet seksjon i et dataprogram som bare kan utføres av en enkelt prosess av gangen. Problemet er aktuelt innenfor parallelle beregninger hvor en delt ressurs kan føre til uventet eller feilaktig adferd, hvis den ikke blir beskyttet
 
 ### What is the difference between race conditions and data races?
  > *Your answer here*
