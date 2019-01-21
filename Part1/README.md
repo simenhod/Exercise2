@@ -1,10 +1,10 @@
 # Mutex and Channel basics
 
 ### What is an atomic operation?
-> *Your answer here*
+> En operasjon eller sett med operasjoner som ikke kan avbrytes når de først har inntruffet. Eks, skrive til et register, lese en verdi eller lignende. 
 
 ### What is a semaphore?
-> *Your answer here*
+> En mekanisme som tillater hvor mange som skal ha tilgang til et område eller lignende. Krever i de fleste tilfelle et syscal. 
 
 ### What is a mutex?
 > *Your answer here*
