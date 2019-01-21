@@ -18,7 +18,7 @@
 ### What is the difference between race conditions and data races?
  > Data race er skjer når to tasks skriver til samme minneområde uten bruk av en beskyttelsesmekansime som mutex eller semafor. 
  
- Race condition er mer generelt når et porgrams korrekte utførelse er avhengig av timing eller at hendelser skjer i en spesiell rekkefølge. Data race er en spesiell form for race condition?
+ > Race condition er mer generelt når et porgrams korrekte utførelse er avhengig av timing eller at hendelser skjer i en spesiell rekkefølge. Data race er en spesiell form for race condition?
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
 > *Your answer here*
