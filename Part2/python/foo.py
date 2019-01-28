@@ -12,18 +12,18 @@ lock = threading.Lock()
 
 def incrementingFunction():
     global i
-    lock.acquire()
     for j in range(1000000):
+        lock.acquire()
         i += 1
-    lock.release()
+        lock.release()
 
 
 def decrementingFunction():
     global i
-    lock.acquire()
     for k in range(1000000):
+        lock.acquire()
         i -= 1
-    lock.release()
+        lock.release()
 
 
 

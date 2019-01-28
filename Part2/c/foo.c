@@ -8,24 +8,24 @@ pthread_mutex_t increment_decrement_mutex;
 
 void* incrementingThreadFunction()
 {
-    pthread_mutex_lock(&increment_decrement_mutex);
     for(int j = 0; j < 1000000; j++)
     {
+        pthread_mutex_lock(&increment_decrement_mutex);
 	    i++;
+        pthread_mutex_unlock(&increment_decrement_mutex);
     }
-    pthread_mutex_unlock(&increment_decrement_mutex);
     return NULL;
 }
 
 void* decrementingThreadFunction()
 {
-    pthread_mutex_lock(&increment_decrement_mutex);
     for (int j = 0; j < 1000000; j++)
     {
+        pthread_mutex_lock(&increment_decrement_mutex);
 	    i--;
+        pthread_mutex_unlock(&increment_decrement_mutex);
     }
     return NULL;
-    pthread_mutex_unlock(&increment_decrement_mutex);
 }
 
 
