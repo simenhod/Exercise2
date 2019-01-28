@@ -21,7 +21,7 @@
  > Race condition er mer generelt når et porgrams korrekte utførelse er avhengig av timing eller at hendelser skjer i en spesiell rekkefølge. Data race er en spesiell form for race condition?
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
-> *Your answer here*
+> I message passing unngår man deadlocks, men man kan få utdaterte verdier. Skalerer stort sett bedre.
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
-> *Your answer here*
+> Kan oppstå deadlock, men man er garantert oppdatert verdi, skalerer stort sett ddårligere enn message passing.
