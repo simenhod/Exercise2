@@ -2,27 +2,37 @@
 #include <stdio.h>
 
 int i = 0;
+pthread_mutex_t increment_decrement_mutex;
 
-// Note the return type: void*
-void* incrementingThreadFunction(){
-    for (int j = 0; j < 1000000; j++) {
-	// TODO: sync access to i
-	i++;
+
+
+void* incrementingThreadFunction()
+{
+    pthread_mutex_lock(&increment_decrement_mutex);
+    for(int j = 0; j < 1000000; j++)
+    {
+	    i++;
     }
+    pthread_mutex_unlock(&increment_decrement_mutex);
     return NULL;
 }
 
-void* decrementingThreadFunction(){
-    for (int j = 0; j < 1000000; j++) {
-	// TODO: sync access to i
-	i--;
+void* decrementingThreadFunction()
+{
+    pthread_mutex_lock(&increment_decrement_mutex);
+    for (int j = 0; j < 1000000; j++)
+    {
+	    i--;
     }
     return NULL;
+    pthread_mutex_unlock(&increment_decrement_mutex);
 }
 
 
-int main(){
+int main()
+{
     pthread_t incrementingThread, decrementingThread;
+    pthread_mutex_init(&increment_decrement_mutex, NULL);
     
     pthread_create(&incrementingThread, NULL, incrementingThreadFunction, NULL);
     pthread_create(&decrementingThread, NULL, decrementingThreadFunction, NULL);
